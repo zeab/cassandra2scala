@@ -1,7 +1,6 @@
 
 //Imports
 import java.time.Instant
-
 import sbt.Def
 import sbt.Keys._
 
@@ -43,7 +42,7 @@ object Common {
   }
 
   //Some assembly setting that have not been put into this application correctly
-//  // No need to run tests while building jar
+  // No need to run tests while building jar
 //  test in assembly := {}
 //  // Simple and constant jar name
 //  assemblyJarName in assembly := s"app-assembly.jar"

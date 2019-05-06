@@ -17,3 +17,9 @@ lazy val cassandra2scala = (project in file("."))
   .enablePlugins(AshScriptPlugin)
   .enablePlugins(AssemblyPlugin)
   .settings(allResolvers: _*)
+  .settings(
+    assemblyMergeStrategy in assembly := {
+      case PathList("META-INF", xs @ _*) => MergeStrategy.discard
+      case x => MergeStrategy.first
+    }
+  )
